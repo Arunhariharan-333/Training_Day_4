@@ -1,0 +1,12 @@
+#https://leetcode.com/problems/power-of-two/
+
+class Solution:
+    def isPowerOfTwo(self, n):
+        return n > 0 and (n & (n - 1)) == 0
+solution = Solution()
+n1 = 1
+print(solution.isPowerOfTwo(n1))
+n2 = 16
+print(solution.isPowerOfTwo(n2))
+n3 = 3
+print(solution.isPowerOfTwo(n3))
