@@ -1,0 +1,13 @@
+#https://leetcode.com/problems/valid-palindrome/
+
+class Solution:
+    def isPalindrome(self, s):
+        filtered_chars = [char.lower() for char in s if char.isalnum()]
+        return filtered_chars == filtered_chars[::-1]
+solution = Solution()
+s1 = "A man, a plan, a canal: Panama"
+print(solution.isPalindrome(s1))
+s2 = "race a car"
+print(solution.isPalindrome(s2))
+s3 = " "
+print(solution.isPalindrome(s3))
