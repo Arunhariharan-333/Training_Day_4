@@ -1,0 +1,13 @@
+#https://leetcode.com/problems/palindrome-number/
+
+class Solution:
+    def isPalindrome(self, x):
+        if x < 0:
+            return False
+        s = str(x)
+        return s == s[::-1]
+
+solution = Solution()
+print(solution.isPalindrome(121))
+print(solution.isPalindrome(-121))
+print(solution.isPalindrome(10))
