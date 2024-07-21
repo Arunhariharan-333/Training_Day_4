@@ -1,0 +1,12 @@
+#leetcode.com/problems/reverse-string/
+
+class Solution:
+    def reverseString(self, s):
+        s.reverse()
+solution = Solution()
+str1 = ["h","e","l","l","o"]
+solution.reverseString(str1)
+print(str1)
+str2 = ["H","a","n","n","a","h"]
+solution.reverseString(str2)
+print(str2)
