@@ -1,0 +1,31 @@
+#https://leetcode.com/problems/lucky-numbers-in-a-matrix/
+
+class Solution:
+    def luckyNumbers(self, matrix):
+        N = len(matrix)
+        M = len(matrix[0])
+        row_min = []
+        for i in range(N):
+            r_min = float('inf')
+            for j in range(M):
+                r_min = min(r_min, matrix[i][j])
+            row_min.append(r_min)
+        col_max = []
+        for i in range(M):
+            c_max = float('-inf')
+            for j in range(N):
+                c_max = max(c_max, matrix[j][i])
+            col_max.append(c_max)
+        lucky_numbers = []
+        for i in range(N):
+            for j in range(M):
+                if matrix[i][j] == row_min[i] and matrix[i][j] == col_max[j]:
+                    lucky_numbers.append(matrix[i][j])
+        return lucky_numbers
+solution = Solution()
+matrix = [
+    [3, 7, 8],
+    [9, 11, 13],
+    [15, 16, 17]
+]
+print(solution.luckyNumbers(matrix))
